@@ -1,0 +1,12 @@
+// Gets all the posts from the API
+
+export const get = async () => {
+    const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+    );
+
+    return {
+        status: 200,
+        body: await response.json()
+    }
+}
